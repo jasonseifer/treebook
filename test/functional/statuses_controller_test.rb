@@ -36,6 +36,7 @@ class StatusesControllerTest < ActionController::TestCase
       post :create, status: { content: @status.content }
     end
 
+    assert_equal users(:jason), assigns(:status).user
     assert_redirected_to status_path(assigns(:status))
   end
 
