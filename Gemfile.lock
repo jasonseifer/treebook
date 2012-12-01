@@ -46,6 +46,11 @@ GEM
     erubis (2.7.0)
     execjs (1.4.0)
       multi_json (~> 1.0)
+    factory_girl (4.1.0)
+      activesupport (>= 3.0.0)
+    factory_girl_rails (4.1.0)
+      factory_girl (~> 4.1.0)
+      railties (>= 3.0.0)
     hike (1.2.1)
     i18n (0.6.0)
     journey (1.0.4)
@@ -106,6 +111,7 @@ GEM
       rack (~> 1.0)
       tilt (~> 1.1, != 1.3.0)
     sqlite3 (1.3.6)
+    state_machine (1.1.2)
     thor (0.15.4)
     tilt (1.3.3)
     treetop (1.4.10)
@@ -124,6 +130,7 @@ PLATFORMS
 DEPENDENCIES
   coffee-rails (~> 3.2.1)
   devise
+  factory_girl_rails
   jquery-rails
   pg
   rails (= 3.2.6)
@@ -131,4 +138,5 @@ DEPENDENCIES
   shoulda
   simple_form
   sqlite3
+  state_machine
   uglifier (>= 1.0.3)
