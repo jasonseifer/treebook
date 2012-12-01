@@ -5,7 +5,7 @@
 
   <%= form_for @user_friendship, method: :post do |form| %>
     <div class="form form-actions">
-      <%= form.hidden_field :friend_id, value: @friend %>
+      <%= form.hidden_field :friend_id, value: @friend.profile_name %>
       <%= submit_tag "Yes, Add Friend", class: 'btn btn-primary' %>
       <%= link_to "Cancel", profile_path(@friend), class: 'btn' %>
     </div>
