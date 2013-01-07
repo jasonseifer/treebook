@@ -2,13 +2,7 @@
   <h1>Viewing Friendship</h1>
 </div>
 
-<% if @user_friendship.requested? %>
-  <h3>Do you really want to be friends with <%= @friend.first_name %>?</h3>
-<% end %>
-
-<% if @user_friendship.accepted? %>
-  <h3>You are friends with <%= @friend.first_name %></h3>
-<% end %>
+<h3><%= @user_friendship.sub_message %></h3>
 
 <div class="form-actions">
   <% if @user_friendship.requested? %>
