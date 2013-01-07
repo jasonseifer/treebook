@@ -13,7 +13,7 @@ class UserFriendshipDecoratorTest < ActiveSupport::TestCase
       end
 
       should "return the correct message" do
-        assert_equal "Do you really want to be friends with Jim?", @decorator.sub_message
+        assert_equal "Friend request pending.", @decorator.sub_message
       end
     end
 

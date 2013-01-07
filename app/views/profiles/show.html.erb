@@ -4,7 +4,7 @@
 
 <% if signed_in? %>
 <div id="friend-status">
-  <% if current_user.friends.include?(@user) %>
+  <% if current_user.friends.include?(@user) || current_user.pending_friends.include?(@user) %>
     <%= link_to "Edit Friendship", edit_user_friendship_path(friend_id: @user), class: 'btn' %>
   <% else %>
     <%= link_to "Add Friend", new_user_friendship_path(friend_id: @user), class: 'btn', id: 'add-friendship', data: { friend_id: @user.to_param } %>
