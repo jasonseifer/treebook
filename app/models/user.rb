@@ -46,16 +46,3 @@ class User < ActiveRecord::Base
     "http://gravatar.com/avatar/#{hash}"
   end
 end
-
-
-
-
-
-
-
-
-
-
-
-
-
