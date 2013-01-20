@@ -17,6 +17,16 @@ class UserFriendshipsController < ApplicationController
     redirect_to user_friendships_path
   end
 
+  def block
+    @user_friendship = current_user.user_friendships.find(params[:id])
+    if @user_friendship.block!
+      flash[:success] = "You have blocked #{@user_friendship.friend.first_name}."
+    else
+      flash[:error] = "That friendship could not be blocked."
+    end
+    redirect_to user_friendships_path
+  end
+
   def new
     if params[:friend_id]
       @friend = User.where(profile_name: params[:friend_id]).first

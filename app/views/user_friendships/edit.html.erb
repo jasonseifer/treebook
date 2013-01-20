@@ -23,6 +23,10 @@
     <% end %>
   <% end %>
 
+  <%= form_for @user_friendship, url: block_user_friendship_path(@user_friendship), method: :put do |form| %>
+    <%= submit_tag "Block Friendship", class: 'btn' %>
+  <% end %>
+
   <%= form_for @user_friendship, url: user_friendship_path(@user_friendship), method: :delete do |form| %>
       <%= submit_tag "Delete Friendship", class: 'btn btn-danger' %>
   <% end %>
